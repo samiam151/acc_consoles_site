@@ -6,11 +6,21 @@ import { FormEventHandler } from 'react';
 import DeleteUser from '@/components/delete-user';
 import HeadingSmall from '@/components/heading-small';
 import InputError from '@/components/input-error';
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select";
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import AppLayout from '@/layouts/app-layout';
 import SettingsLayout from '@/layouts/settings/layout';
+
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -22,14 +32,20 @@ const breadcrumbs: BreadcrumbItem[] = [
 type ProfileForm = {
     name: string;
     email: string;
+    isPSN: number;
+    gamer_id: string;
 }
 
 export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: boolean; status?: string }) {
     const { auth } = usePage<SharedData>().props;
 
+    console.log(usePage<SharedData>().props);
+
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm<Required<ProfileForm>>({
         name: auth.user.name,
         email: auth.user.email,
+        isPSN: auth.user.isPSN,
+        gamer_id: auth.user.gamer_id
     });
 
     const submit: FormEventHandler = (e) => {
@@ -80,6 +96,38 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
                             />
 
                             <InputError className="mt-2" message={errors.email} />
+                        </div>
+
+                        <div className="grid gap-2">
+                            <Label htmlFor='isPSN'>What is your platform?</Label>
+                            <Select
+                                name='isPSN'
+                                value={`${data.isPSN}`}
+                                onValueChange={(value) => setData("isPSN", Number(value))}
+                            >
+                                <SelectTrigger>
+                                    <SelectValue placeholder="Select your platform" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectGroup>
+                                    <SelectItem value="1">PlayStation</SelectItem>
+                                    <SelectItem value="0">XBox</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
+
+                            <InputError className="mt-2" message={errors.email} />
+                        </div>
+
+                        <div className="grid gap-2">
+                            <label htmlFor="gamer_id">Gamer ID</label>
+                            <Input
+                                name='gamer_id'
+                                type="text"
+                                value={data.gamer_id}
+                                placeholder='PlayStation ID or XBOX'
+                                onChange={e => setData("gamer_id", e.target.value)}
+                             />
                         </div>
 
                         {mustVerifyEmail && auth.user.email_verified_at === null && (

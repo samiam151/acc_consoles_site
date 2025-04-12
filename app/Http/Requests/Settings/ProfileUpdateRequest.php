@@ -18,7 +18,8 @@ class ProfileUpdateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-
+            'isPSN' => ['required'],
+            'gamer_id' => ['required', 'string', 'max:255'],
             'email' => [
                 'required',
                 'string',
