@@ -28,24 +28,30 @@ const breadcrumbs: BreadcrumbItem[] = [
 ];
 
 type AdminUserEditForm = {
+    id: string;
     name: string;
     email: string;
     isPSN: number;
     gamer_id: string;
-}
-
-const submit = (e: SyntheticEvent) => {
-    e.preventDefault();
+    role_id: number;
 }
 
 export default function UserDetail({ user }) {
     console.log(user);
-    const { data, setData, patch, errors, processing, recentlySuccessful } = useForm<Required<AdminUserEditForm>>({
+    const { data, setData, put, errors, processing, recentlySuccessful } = useForm<Required<AdminUserEditForm>>({
+        id: user.id,
         name: user.name,
         email: user.email,
         isPSN: user.isPSN,
-        gamer_id: user.gamer_id
+        gamer_id: user.gamer_id,
+        role_id: user.role.role_id
     });
+
+    const submit = (e: SyntheticEvent) => {
+        e.preventDefault();
+
+        put(route('admin.user.update', data));
+    }
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
@@ -67,7 +73,7 @@ export default function UserDetail({ user }) {
                             placeholder="Full name"
                         />
 
-                        {/* <InputError className="mt-2" message={errors.name} /> */}
+                        <InputError className="mt-2" message={errors.name} />
                     </div>
 
                     <div className="grid gap-2">
@@ -84,7 +90,7 @@ export default function UserDetail({ user }) {
                             placeholder="Email address"
                         />
 
-                        {/* <InputError className="mt-2" message={errors.email} /> */}
+                        <InputError className="mt-2" message={errors.email} />
                     </div>
 
                     <div className="grid gap-2">
@@ -105,7 +111,7 @@ export default function UserDetail({ user }) {
                             </SelectContent>
                         </Select>
 
-                        {/* <InputError className="mt-2" message={errors.email} /> */}
+                        <InputError className="mt-2" message={errors.isPSN} />
                     </div>
 
                     <div className="grid gap-2">
@@ -117,6 +123,27 @@ export default function UserDetail({ user }) {
                             placeholder='PlayStation ID or XBOX'
                             onChange={e => setData("gamer_id", e.target.value)}
                         />
+                    </div>
+
+                    <div className="grid gap-2">
+                        <Label htmlFor='isPSN'>User Role</Label>
+                        <Select
+                            name='role_id'
+                            value={`${data.role_id}`}
+                            onValueChange={(value) => setData("role_id", Number(value))}
+                        >
+                            <SelectTrigger>
+                                <SelectValue placeholder="Select role" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    <SelectItem value="2">User</SelectItem>
+                                    <SelectItem value="1">Admin</SelectItem>
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+
+                        <InputError className="mt-2" message={errors.role_id} />
                     </div>
 
 

@@ -25,9 +25,6 @@ const breadcrumbs: BreadcrumbItem[] = [
 ];
 
 export default function Dashboard({ users }) {
-    // const { users } = usePage<SharedData>().props;
-    const userss = Array.from(users);
-    console.log(userss);
     console.log(users[0])
 
     return (
@@ -41,6 +38,8 @@ export default function Dashboard({ users }) {
                         <TableRow>
                             <TableHead className="w-[100px]">User ID</TableHead>
                             <TableHead>Name</TableHead>
+                            <TableHead>Email</TableHead>
+                            <TableHead>Role</TableHead>
                             <TableHead>Platform</TableHead>
                             <TableHead>Gamer ID</TableHead>
                             <TableHead>Created Date</TableHead>
@@ -53,6 +52,8 @@ export default function Dashboard({ users }) {
                                 <TableRow>
                                     <TableCell className="font-medium">{ user.id }</TableCell>
                                     <TableCell>{ user.name }</TableCell>
+                                    <TableCell>{ user.email }</TableCell>
+                                    <TableCell>{ user.role.role_id == 1 ? "Admin" : "User" }</TableCell>
                                     <TableCell>{ user.isPSN ? "PlayStation" : "XBOX" }</TableCell>
                                     <TableCell>{ user.gamer_id }</TableCell>
                                     <TableCell>{ user.created_at }</TableCell>
