@@ -45,6 +45,7 @@ class UsersTableSeeder extends Seeder
             $newUser->attachRole($userRole);
         }
 
+
         User::factory()->count(50)->create();
     }
 }

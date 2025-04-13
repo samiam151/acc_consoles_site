@@ -2,11 +2,9 @@ import AppLayout from '@/layouts/app-layout';
 import { type BreadcrumbItem } from '@/types';
 import { Head, Link } from '@inertiajs/react';
 import AdminLayout from "@/layouts/admin/layout";
-import { usePage } from '@inertiajs/react';
 import { Button } from "@/components/ui/button";
 
 import { User } from "@/types/index";
-import { type SharedData } from '@/types';
 
 import {
     Table,
@@ -17,7 +15,7 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-  } from "@/components/ui/table"
+} from "@/components/ui/table"
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -37,6 +35,7 @@ export default function Dashboard({ users }) {
             <Head title="Admin Portal" />
 
             <AdminLayout>
+                <h2>Manage Users</h2>
                 <Table>
                     <TableHeader>
                         <TableRow>
@@ -59,7 +58,7 @@ export default function Dashboard({ users }) {
                                     <TableCell>{ user.created_at }</TableCell>
                                     <TableCell>
                                         <Button>
-                                            <Link href=''>Edit</Link>
+                                            <Link href={`/admin/users/${user.id}`}>Edit</Link>
                                         </Button>
                                     </TableCell>
                                 </TableRow>

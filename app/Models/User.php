@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use jeremykenedy\LaravelRoles\Traits\HasRoleAndPermission;
@@ -35,6 +36,11 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+
+    public function role(): HasOne {
+        return $this->hasOne(RoleUser::class, 'user_id');
+    }
 
     /**
      * Get the attributes that should be cast.
