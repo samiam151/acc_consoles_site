@@ -6,7 +6,7 @@ use Inertia\Inertia;
 use App\Models\User;
 use App\Http\Controllers\Admin;
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth', 'verified', 'admin'])->group(function () {
     Route::prefix('admin')->group(function () {
         Route::get('/users', [AdminController::class, "users"])->name('admin.users');
         Route::put('/users', [AdminController::class, "update"])->name('admin.user.update');

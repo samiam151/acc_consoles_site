@@ -37,7 +37,6 @@ type AdminUserEditForm = {
 }
 
 export default function UserDetail({ user }) {
-    console.log(user);
     const { data, setData, put, errors, processing, recentlySuccessful } = useForm<Required<AdminUserEditForm>>({
         id: user.id,
         name: user.name,

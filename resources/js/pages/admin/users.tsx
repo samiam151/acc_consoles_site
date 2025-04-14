@@ -16,6 +16,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+import { Roles } from '@/enums/roles';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -25,7 +26,6 @@ const breadcrumbs: BreadcrumbItem[] = [
 ];
 
 export default function Dashboard({ users }) {
-    console.log(users[0])
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
@@ -53,7 +53,7 @@ export default function Dashboard({ users }) {
                                     <TableCell className="font-medium">{ user.id }</TableCell>
                                     <TableCell>{ user.name }</TableCell>
                                     <TableCell>{ user.email }</TableCell>
-                                    <TableCell>{ user.role.role_id == 1 ? "Admin" : "User" }</TableCell>
+                                    <TableCell>{ user.role.role_id == Roles.ADMIN ? "Admin" : "User" }</TableCell>
                                     <TableCell>{ user.isPSN ? "PlayStation" : "XBOX" }</TableCell>
                                     <TableCell>{ user.gamer_id }</TableCell>
                                     <TableCell>{ user.created_at }</TableCell>
