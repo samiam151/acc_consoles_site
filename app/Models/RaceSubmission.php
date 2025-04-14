@@ -16,4 +16,8 @@ class RaceSubmission extends Model
     public function user(): HasOne {
         return $this->hasOne(User::class, 'user_id');
     }
+
+    public function car(): HasOne {
+        return $this->hasOne(Car::class, 'car_id');
+    }
 }
