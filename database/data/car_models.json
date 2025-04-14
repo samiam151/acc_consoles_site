@@ -1,0 +1,326 @@
+[
+  {
+    "id": 0,
+    "car_make": "porsche",
+    "car_model": "Porsche 991 GT3 R",
+    "image": null
+  },
+  {
+    "id": 1,
+    "car_make": "mercedes",
+    "car_model": "Mercedes-AMG GT3",
+    "image": null
+  },
+  {
+    "id": 2,
+    "car_make": "ferrari",
+    "car_model": "Ferrari 488 GT3",
+    "image": null
+  },
+  {
+    "id": 3,
+    "car_make": "audi",
+    "car_model": "Audi R8 LMS",
+    "image": null
+  },
+  {
+    "id": 4,
+    "car_make": "lamborghini",
+    "car_model": "Lamborghini Huracan GT3",
+    "image": null
+  },
+  {
+    "id": 5,
+    "car_make": "mclaren",
+    "car_model": "McLaren 650S GT3",
+    "image": null
+  },
+  {
+    "id": 6,
+    "car_make": "nissan",
+    "car_model": "Nissan GT-R Nismo GT3 2018",
+    "image": null
+  },
+  {
+    "id": 7,
+    "car_make": "bmw",
+    "car_model": "BMW M6 GT3",
+    "image": null
+  },
+  {
+    "id": 8,
+    "car_make": "bentley",
+    "car_model": "Bentley Continental GT3 2018",
+    "image": null
+  },
+  {
+    "id": 9,
+    "car_make": "porsche",
+    "car_model": "Porsche 991II GT3 Cup",
+    "image": null
+  },
+  {
+    "id": 10,
+    "car_make": "nissan",
+    "car_model": "Nissan GT-R Nismo GT3 2017",
+    "image": null
+  },
+  {
+    "id": 11,
+    "car_make": "bentley",
+    "car_model": "Bentley Continental GT3 2016",
+    "image": null
+  },
+  {
+    "id": 12,
+    "car_make": "aston-martin",
+    "car_model": "Aston Martin V12 Vantage GT3",
+    "image": null
+  },
+  {
+    "id": 13,
+    "car_make": "reiter",
+    "car_model": "R-EX",
+    "image": null
+  },
+  {
+    "id": 14,
+    "car_make": "jaguar",
+    "car_model": "Jaguar G3",
+    "image": null
+  },
+  {
+    "id": 15,
+    "car_make": "lexus",
+    "car_model": "Lexus RC F GT3",
+    "image": null
+  },
+  {
+    "id": 16,
+    "car_make": "lamborghini",
+    "car_model": "Lamborghini Huracan Evo (2019)",
+    "image": null
+  },
+  {
+    "id": 17,
+    "car_make": "honda",
+    "car_model": "Honda NSX GT3",
+    "image": null
+  },
+  {
+    "id": 18,
+    "car_make": "lamborghini",
+    "car_model": "Lamborghini Huracan SuperTrofeo",
+    "image": null
+  },
+  {
+    "id": 19,
+    "car_make": "audi",
+    "car_model": "Audi R8 LMS Evo (2019)",
+    "image": null
+  },
+  {
+    "id": 20,
+    "car_make": "aston-martin",
+    "car_model": "AMR V8 Vantage (2019)",
+    "image": null
+  },
+  {
+    "id": 21,
+    "car_make": "honda",
+    "car_model": "Honda NSX Evo (2019)",
+    "image": null
+  },
+  {
+    "id": 22,
+    "car_make": "mclaren",
+    "car_model": "McLaren 720S GT3 (2019)",
+    "image": null
+  },
+  {
+    "id": 23,
+    "car_make": "porsche",
+    "car_model": "Porsche 911II GT3 R (2019)",
+    "image": null
+  },
+  {
+    "id": 24,
+    "car_make": "ferrari",
+    "car_model": "Ferrari 488 GT3 Evo 2020",
+    "image": null
+  },
+  {
+    "id": 25,
+    "car_make": "mercedes",
+    "car_model": "Mercedes-AMG GT3 2020",
+    "image": null
+  },
+  {
+    "id": 26,
+    "car_make": "bmw",
+    "car_model": "BMW M4 GT3",
+    "image": null
+  },
+  {
+    "id": 27,
+    "car_make": "porsche",
+    "car_model": "Porsche 911 GT3 Cup (Type 992)",
+    "image": null
+  },
+  {
+    "id": 28,
+    "car_make": "bmw",
+    "car_model": "BMW M2 CS Racing",
+    "image": null
+  },
+  {
+    "id": 29,
+    "car_make": "lamborghini",
+    "car_model": "Lamborghini Huracán Super Trofeo EVO2",
+    "image": null
+  },
+  {
+    "id": 30,
+    "car_make": "ferrari",
+    "car_model": "Ferrari 488 Challenge Evo",
+    "image": null
+  },
+  {
+    "id": 31,
+    "car_make": "audi",
+    "car_model": "Audi R8 LMS GT3 evo II",
+    "image": null
+  },
+  {
+    "id": 32,
+    "car_make": "ferrari",
+    "car_model": "Ferrari 296 GT3",
+    "image": null
+  },
+  {
+    "id": 33,
+    "car_make": "lamborghini",
+    "car_model": "Lamborghini Huracan Evo2",
+    "image": null
+  },
+  {
+    "id": 34,
+    "car_make": "porsche",
+    "car_model": "Porsche 992 GT3 R",
+    "image": null
+  },
+  {
+    "id": 35,
+    "car_make": "mclaren",
+    "car_model": "McLaren 720S GT3 Evo 2023",
+    "image": null
+  },
+  {
+    "id": 36,
+    "car_make": "ford",
+    "car_model": "Ford Mustang GT3",
+    "image": null
+  },
+  {
+    "id": 50,
+    "car_make": "alpine",
+    "car_model": "Alpine A110 GT4",
+    "image": null
+  },
+  {
+    "id": 51,
+    "car_make": "aston-martin",
+    "car_model": "AMR V8 Vantage GT4",
+    "image": null
+  },
+  {
+    "id": 52,
+    "car_make": "audi",
+    "car_model": "Audi R8 LMS GT4",
+    "image": null
+  },
+  {
+    "id": 53,
+    "car_make": "bmw",
+    "car_model": "BMW M4 GT4",
+    "image": null
+  },
+  {
+    "id": 55,
+    "car_make": "chevrolet",
+    "car_model": "Chevrolet Camaro GT4",
+    "image": null
+  },
+  {
+    "id": 56,
+    "car_make": "ginetta",
+    "car_model": "Ginetta G55 GT4",
+    "image": null
+  },
+  {
+    "id": 57,
+    "car_make": "ktm",
+    "car_model": "KTM X-Bow GT4",
+    "image": null
+  },
+  {
+    "id": 58,
+    "car_make": "maserati",
+    "car_model": "Maserati MC GT4",
+    "image": null
+  },
+  {
+    "id": 59,
+    "car_make": "mclaren",
+    "car_model": "McLaren 570S GT4",
+    "image": null
+  },
+  {
+    "id": 60,
+    "car_make": "mercedes",
+    "car_model": "Mercedes-AMG GT4",
+    "image": null
+  },
+  {
+    "id": 61,
+    "car_make": "porsche",
+    "car_model": "Porsche 718 Cayman GT4",
+    "image": null
+  },
+  {
+    "id": 80,
+    "car_make": "audi",
+    "car_model": "Audi R8 LMS GT2",
+    "image": null
+  },
+  {
+    "id": 82,
+    "car_make": "ktm",
+    "car_model": "KTM XBOW GT2",
+    "image": null
+  },
+  {
+    "id": 83,
+    "car_make": "maserati",
+    "car_model": "Maserati MC20 GT2",
+    "image": null
+  },
+  {
+    "id": 84,
+    "car_make": "mercedes",
+    "car_model": "Mercedes AMG GT2",
+    "image": null
+  },
+  {
+    "id": 85,
+    "car_make": "porsche",
+    "car_model": "Porsche 911 GT2 RS CS Evo",
+    "image": null
+  },
+  {
+    "id": 86,
+    "car_make": "porsche",
+    "car_model": "Porsche 935",
+    "image": null
+  }
+]
