@@ -26,6 +26,8 @@ class TrackController extends Controller
             'trackCountry' => 'required|string',
             'trackCountryCode' => 'required|string|size:2',
             'trackImage' => 'nullable|string',
+            'trackDLC' => 'sometimes|boolean',
+
         ]);
 
         return Track::create($validated);
@@ -35,7 +37,7 @@ class TrackController extends Controller
     {
         $track = Track::findOrFail($id);
         $track->update($request->only([
-            'trackName', 'trackSlug', 'trackCountry', 'trackCountryCode', 'trackImage'
+            'trackName', 'trackSlug', 'trackCountry', 'trackCountryCode', 'trackImage', 'trackDLC'
         ]));
         return $track;
     }

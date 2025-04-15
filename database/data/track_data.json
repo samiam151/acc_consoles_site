@@ -5,7 +5,8 @@
         "trackSlug": "barcelona",
         "trackCountry": "Spain",
         "trackCountryCode": "ES",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 1,
@@ -13,7 +14,8 @@
         "trackSlug": "brands_hatch",
         "trackCountry": "Great Britain",
         "trackCountryCode": "GB",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 2,
@@ -21,7 +23,8 @@
         "trackSlug": "cota",
         "trackCountry": "United States",
         "trackCountryCode": "US",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 3,
@@ -29,7 +32,8 @@
         "trackSlug": "donington",
         "trackCountry": "Great Britain",
         "trackCountryCode": "GB",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 4,
@@ -37,7 +41,8 @@
         "trackSlug": "hungaroring",
         "trackCountry": "Hungary",
         "trackCountryCode": "HU",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 5,
@@ -45,7 +50,8 @@
         "trackSlug": "imola",
         "trackCountry": "Italy",
         "trackCountryCode": "IT",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 6,
@@ -53,7 +59,8 @@
         "trackSlug": "indianapolis",
         "trackCountry": "United States",
         "trackCountryCode": "US",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 7,
@@ -61,7 +68,8 @@
         "trackSlug": "kyalami",
         "trackCountry": "South Africa",
         "trackCountryCode": "ZA",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 8,
@@ -69,7 +77,8 @@
         "trackSlug": "laguna_seca",
         "trackCountry": "United States",
         "trackCountryCode": "US",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 9,
@@ -77,7 +86,8 @@
         "trackSlug": "misano",
         "trackCountry": "Italy",
         "trackCountryCode": "IT",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 10,
@@ -85,7 +95,8 @@
         "trackSlug": "monza",
         "trackCountry": "Italy",
         "trackCountryCode": "IT",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 11,
@@ -93,7 +104,8 @@
         "trackSlug": "mount_panorama",
         "trackCountry": "Australia",
         "trackCountryCode": "AU",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 12,
@@ -101,7 +113,8 @@
         "trackSlug": "nurburgring",
         "trackCountry": "Germany",
         "trackCountryCode": "DE",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 13,
@@ -109,7 +122,8 @@
         "trackSlug": "nurburgring_24",
         "trackCountry": "Germany",
         "trackCountryCode": "DE",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 14,
@@ -117,7 +131,8 @@
         "trackSlug": "outlon_park",
         "trackCountry": "Great Britain",
         "trackCountryCode": "GB",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 15,
@@ -125,7 +140,8 @@
         "trackSlug": "paul_ricard",
         "trackCountry": "France",
         "trackCountryCode": "FR",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 16,
@@ -133,7 +149,8 @@
         "trackSlug": "red_bull_ring",
         "trackCountry": "Austria",
         "trackCountryCode": "AT",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 17,
@@ -141,7 +158,8 @@
         "trackSlug": "silverstone",
         "trackCountry": "Great Britain",
         "trackCountryCode": "GB",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 18,
@@ -149,7 +167,8 @@
         "trackSlug": "snetterton",
         "trackCountry": "Great Britain",
         "trackCountryCode": "GB",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 19,
@@ -157,7 +176,8 @@
         "trackSlug": "spa",
         "trackCountry": "Belgium",
         "trackCountryCode": "BE",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 20,
@@ -165,7 +185,8 @@
         "trackSlug": "suzuka",
         "trackCountry": "Japan",
         "trackCountryCode": "JP",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 21,
@@ -173,7 +194,8 @@
         "trackSlug": "valencia",
         "trackCountry": "Spain",
         "trackCountryCode": "ES",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 22,
@@ -181,7 +203,8 @@
         "trackSlug": "watkins_glen",
         "trackCountry": "United States",
         "trackCountryCode": "US",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 23,
@@ -189,7 +212,8 @@
         "trackSlug": "zandvoort",
         "trackCountry": "Netherlands",
         "trackCountryCode": "NL",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     },
     {
         "id": 24,
@@ -197,6 +221,7 @@
         "trackSlug": "zolder",
         "trackCountry": "Belgium",
         "trackCountryCode": "BE",
-        "trackImage": ""
+        "trackImage": "",
+        "trackDLC": false
     }
 ]

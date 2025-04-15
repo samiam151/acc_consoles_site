@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('trackCountry');
             $table->string('trackCountryCode', 2);
             $table->string('trackImage')->nullable();
+            $table->boolean('trackDLC')->default(false);
             $table->timestamps();
         });
     }

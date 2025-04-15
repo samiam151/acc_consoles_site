@@ -17,5 +17,6 @@ class Track extends Model
         'trackCountry',
         'trackCountryCode',
         'trackImage',
+        'trackDLC',
     ];
 }
