@@ -29,9 +29,9 @@ export default function Dashboard({ users }) {
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
-            <Head title="Admin Portal" />
-
             <AdminLayout>
+                <Head title="Admin Portal" />
+
                 <h2>Manage Users</h2>
                 <Table>
                     <TableHeader>
@@ -49,7 +49,7 @@ export default function Dashboard({ users }) {
                     <TableBody>
                         {
                             users.map((user: User) => (
-                                <TableRow>
+                                <TableRow key={user.id}>
                                     <TableCell className="font-medium">{ user.id }</TableCell>
                                     <TableCell>{ user.name }</TableCell>
                                     <TableCell>{ user.email }</TableCell>

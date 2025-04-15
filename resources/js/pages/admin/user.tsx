@@ -1,8 +1,6 @@
 import { User } from "@/types/index";
-import AppLayout from '@/layouts/app-layout';
 import { type BreadcrumbItem } from '@/types';
 import { Head, Link, useForm } from '@inertiajs/react';
-import AdminLayout from "@/layouts/admin/layout";
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -18,6 +16,8 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
+import AppLayout from "@/layouts/app-layout";
+import AdminLayout from "@/layouts/admin/layout";
 
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -53,10 +53,9 @@ export default function UserDetail({ user }) {
     }
 
     return (
-        <AppLayout breadcrumbs={breadcrumbs}>
-            <Head title="Admin Portal" />
-
+        <AppLayout>
             <AdminLayout>
+                <Head title="Admin Portal" />
 
                 <form onSubmit={submit} className="space-y-6">
                     <div className="grid gap-2">
@@ -162,6 +161,7 @@ export default function UserDetail({ user }) {
                     </div>
                 </form>
             </AdminLayout>
+
         </AppLayout>
     )
 }
