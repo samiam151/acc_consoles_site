@@ -34,7 +34,7 @@
     {
         "id": 4,
         "trackName": "Hungaroring",
-        "trackSlug": "Hungaroring",
+        "trackSlug": "hungaroring",
         "trackCountry": "Hungary",
         "trackCountryCode": "HU",
         "trackImage": ""
@@ -42,7 +42,7 @@
     {
         "id": 5,
         "trackName": "Imola",
-        "trackSlug": "Imola",
+        "trackSlug": "imola",
         "trackCountry": "Italy",
         "trackCountryCode": "IT",
         "trackImage": ""
@@ -58,7 +58,7 @@
     {
         "id": 7,
         "trackName": "Kyalami",
-        "trackSlug": "Kyalami",
+        "trackSlug": "kyalami",
         "trackCountry": "South Africa",
         "trackCountryCode": "ZA",
         "trackImage": ""
@@ -66,7 +66,7 @@
     {
         "id": 8,
         "trackName": "Laguna Seca",
-        "trackSlug": "Laguna_Seca",
+        "trackSlug": "laguna_seca",
         "trackCountry": "United States",
         "trackCountryCode": "US",
         "trackImage": ""
@@ -122,7 +122,7 @@
     {
         "id": 15,
         "trackName": "Paul Ricard",
-        "trackSlug": "Paul_Ricard",
+        "trackSlug": "paul_ricard",
         "trackCountry": "France",
         "trackCountryCode": "FR",
         "trackImage": ""
@@ -138,7 +138,7 @@
     {
         "id": 17,
         "trackName": "Silverstone",
-        "trackSlug": "Silverstone",
+        "trackSlug": "silverstone",
         "trackCountry": "Great Britain",
         "trackCountryCode": "GB",
         "trackImage": ""
@@ -162,7 +162,7 @@
     {
         "id": 20,
         "trackName": "Suzuka",
-        "trackSlug": "Suzuka",
+        "trackSlug": "suzuka",
         "trackCountry": "Japan",
         "trackCountryCode": "JP",
         "trackImage": ""
@@ -170,7 +170,7 @@
     {
         "id": 21,
         "trackName": "Valencia",
-        "trackSlug": "Valencia",
+        "trackSlug": "valencia",
         "trackCountry": "Spain",
         "trackCountryCode": "ES",
         "trackImage": ""
@@ -186,7 +186,7 @@
     {
         "id": 23,
         "trackName": "Zandvoort",
-        "trackSlug": "Zandvoort",
+        "trackSlug": "zandvoort",
         "trackCountry": "Netherlands",
         "trackCountryCode": "NL",
         "trackImage": ""
@@ -194,7 +194,7 @@
     {
         "id": 24,
         "trackName": "Zolder",
-        "trackSlug": "Zolder",
+        "trackSlug": "zolder",
         "trackCountry": "Belgium",
         "trackCountryCode": "BE",
         "trackImage": ""
