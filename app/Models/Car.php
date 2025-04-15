@@ -15,5 +15,6 @@ class Car extends Model
         'car_make',
         'car_model',
         'image',
+        'car_dlc',
     ];
 }

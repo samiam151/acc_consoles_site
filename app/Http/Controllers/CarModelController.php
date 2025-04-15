@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Car;
 use Illuminate\Http\Request;
 
 class CarModelController extends Controller
@@ -23,6 +24,7 @@ class CarModelController extends Controller
             'car_make' => 'required|string',
             'car_model' => 'required|string',
             'image' => 'nullable|string',
+            'car_dlc' => 'sometimes|boolean',
         ]);
 
         return CarModel::create($validated);
