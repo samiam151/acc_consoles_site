@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ConnectRelationshipsSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(CarModelsTableSeeder::class);
+        $this->call(TracksTableSeeder::class);
 
         Model::reguard();
     }
