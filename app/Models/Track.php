@@ -12,11 +12,11 @@ class Track extends Model
 
     protected $fillable = [
         'id',
-        'trackName',
-        'trackSlug',
-        'trackCountry',
-        'trackCountryCode',
-        'trackImage',
-        'trackDLC',
+        'track_name',
+        'track_slug',
+        'track_country',
+        'track_country_code',
+        'track_image',
+        'track_dlc',
     ];
 }

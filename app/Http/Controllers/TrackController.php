@@ -21,12 +21,12 @@ class TrackController extends Controller
     {
         $validated = $request->validate([
             'id' => 'required|integer|unique:tracks',
-            'trackName' => 'required|string',
-            'trackSlug' => 'required|string',
-            'trackCountry' => 'required|string',
-            'trackCountryCode' => 'required|string|size:2',
-            'trackImage' => 'nullable|string',
-            'trackDLC' => 'sometimes|boolean',
+            'track_name' => 'required|string',
+            'track_slug' => 'required|string',
+            'track_country' => 'required|string',
+            'track_country_code' => 'required|string|size:2',
+            'trackI_image' => 'nullable|string',
+            'track_dlc' => 'sometimes|boolean',
 
         ]);
 
@@ -37,7 +37,7 @@ class TrackController extends Controller
     {
         $track = Track::findOrFail($id);
         $track->update($request->only([
-            'trackName', 'trackSlug', 'trackCountry', 'trackCountryCode', 'trackImage', 'trackDLC'
+            'track_name', 'track_slug', 'track_country', 'track_country_code', 'track_image', 'track_dlc'
         ]));
         return $track;
     }

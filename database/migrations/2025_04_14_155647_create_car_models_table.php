@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('car_make');
             $table->string('car_model');
             $table->string('image')->nullable();
+            $table->boolean('car_dlc')->default(false);
             $table->timestamps();
         });
     }
