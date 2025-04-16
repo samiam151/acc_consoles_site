@@ -8,6 +8,8 @@ import {
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
+    DropdownMenuSeparator,
+    DropdownMenuGroup,
   } from "@/components/ui/dropdown-menu"
 
 export function Header() {
@@ -17,15 +19,17 @@ export function Header() {
         <>
             <Head title="Welcome">
                 <link rel="preconnect" href="https://fonts.bunny.net" />
-                <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+                <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700,800,900" rel="stylesheet" />
             </Head>
 
             <header className="container m-auto py-6 flex justify-between items-center">
                 <nav className="nav--left flex items-center">
                     <div className="logo mr-12 ">
-                        <Link href="/">
-                            LOGO
-                        </Link>
+                        <h1 className='text-xl font-black tracking-tight'>
+                            <Link href="/">
+                                LOGO
+                            </Link>
+                        </h1>
                     </div>
                     <div className="nav--left__links">
                         <Link href='#' className="mr-12">Races</Link>
@@ -58,15 +62,23 @@ export function Header() {
                                     <Button variant="ghost" className='ml-4'>Settings</Button>
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent className="w-56" align="end">
-                                    <DropdownMenuItem>
-                                        <Link href={route('profile.edit')}>Profile</Link>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuItem>
-                                        <Link href={route('password.edit')}>Password</Link>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuItem>
-                                        <Link href="/settings/appearance">Appearance</Link>
-                                    </DropdownMenuItem>
+                                    <DropdownMenuGroup>
+                                        <DropdownMenuItem>
+                                            <Link href={route('profile.edit')}>Profile</Link>
+                                        </DropdownMenuItem>
+                                        <DropdownMenuItem>
+                                            <Link href={route('password.edit')}>Password</Link>
+                                        </DropdownMenuItem>
+                                        <DropdownMenuItem>
+                                            <Link href="/settings/appearance">Appearance</Link>
+                                        </DropdownMenuItem>
+                                    </DropdownMenuGroup>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuGroup>
+                                        <DropdownMenuItem>
+                                            <Link href={route("logout")}>Log Out</Link>
+                                        </DropdownMenuItem>
+                                    </DropdownMenuGroup>
                                 </DropdownMenuContent>
                             </DropdownMenu>
                         </>
