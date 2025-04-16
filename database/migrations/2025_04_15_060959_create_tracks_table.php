@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('tracks', function (Blueprint $table) {
             $table->unsignedInteger('id')->primary();
-            $table->string('trackName');
-            $table->string('trackSlug');
-            $table->string('trackCountry');
-            $table->string('trackCountryCode', 2);
-            $table->string('trackImage')->nullable();
-            $table->boolean('trackDLC')->default(false);
+            $table->string('track_name');
+            $table->string('track_slug');
+            $table->string('track_country');
+            $table->string('track_country_code', 2);
+            $table->string('track_image')->nullable();
+            $table->boolean('track_dlc')->default(false);
             $table->timestamps();
         });
     }
