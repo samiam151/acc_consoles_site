@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
@@ -43,5 +44,8 @@ class UsersTableSeeder extends Seeder
 
             $newUser->attachRole($userRole);
         }
+
+
+        User::factory()->count(50)->create();
     }
 }

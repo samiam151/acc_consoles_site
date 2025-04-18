@@ -4,13 +4,25 @@ import { Link, usePage } from '@inertiajs/react';
 
 export function NavMain({ items = [] }: { items: NavItem[] }) {
     const page = usePage();
+    console.log(page);
+
+    const user_role = page.props.auth.user.role.role_id;
+
+    items = items.filter(item => {
+        if (!Object.prototype.hasOwnProperty.call(item, "roles")) return true;
+        if (!item.roles?.includes(user_role)) {
+            return false;
+        }
+        return true;
+    })
+
     return (
         <SidebarGroup className="px-2 py-0">
             <SidebarGroupLabel>Platform</SidebarGroupLabel>
             <SidebarMenu>
                 {items.map((item) => (
                     <SidebarMenuItem key={item.title}>
-                        <SidebarMenuButton  
+                        <SidebarMenuButton
                             asChild isActive={item.href === page.url}
                             tooltip={{ children: item.title }}
                         >

@@ -6,14 +6,23 @@ import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
 import { BookOpen, Folder, LayoutGrid } from 'lucide-react';
 import AppLogo from './app-logo';
+import { Roles } from '@/enums/roles';
 
 const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
         href: '/dashboard',
         icon: LayoutGrid,
+        roles: [Roles.ADMIN, Roles.User]
+    },
+    {
+        title: 'Admin Portal',
+        href: '/admin/users',
+        icon: LayoutGrid,
+        roles: [Roles.ADMIN]
     },
 ];
+
 
 const footerNavItems: NavItem[] = [
     {

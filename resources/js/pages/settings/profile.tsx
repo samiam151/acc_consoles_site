@@ -11,7 +11,6 @@ import {
     SelectContent,
     SelectGroup,
     SelectItem,
-    SelectLabel,
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
@@ -38,8 +37,6 @@ type ProfileForm = {
 
 export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: boolean; status?: string }) {
     const { auth } = usePage<SharedData>().props;
-
-    console.log(usePage<SharedData>().props);
 
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm<Required<ProfileForm>>({
         name: auth.user.name,
@@ -71,7 +68,7 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
                             <Input
                                 id="name"
                                 className="mt-1 block w-full"
-                                value={data.name}
+                                value={data.name || ""}
                                 onChange={(e) => setData('name', e.target.value)}
                                 required
                                 autoComplete="name"
@@ -88,7 +85,7 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
                                 id="email"
                                 type="email"
                                 className="mt-1 block w-full"
-                                value={data.email}
+                                value={data.email || ""}
                                 onChange={(e) => setData('email', e.target.value)}
                                 required
                                 autoComplete="username"
@@ -124,7 +121,7 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
                             <Input
                                 name='gamer_id'
                                 type="text"
-                                value={data.gamer_id}
+                                value={data.gamer_id || ""}
                                 placeholder='PlayStation ID or XBOX'
                                 onChange={e => setData("gamer_id", e.target.value)}
                              />

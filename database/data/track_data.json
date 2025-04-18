@@ -1,0 +1,227 @@
+[
+    {
+        "id": 0,
+        "track_name": "Barcelona",
+        "track_slug": "barcelona",
+        "track_country": "Spain",
+        "track_country_code": "ES",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 1,
+        "track_name": "Brands Hatch",
+        "track_slug": "brands_hatch",
+        "track_country": "Great Britain",
+        "track_country_code": "GB",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 2,
+        "track_name": "Circuit of the Americas",
+        "track_slug": "cota",
+        "track_country": "United States",
+        "track_country_code": "US",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 3,
+        "track_name": "Donington Park",
+        "track_slug": "donington",
+        "track_country": "Great Britain",
+        "track_country_code": "GB",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 4,
+        "track_name": "Hungaroring",
+        "track_slug": "hungaroring",
+        "track_country": "Hungary",
+        "track_country_code": "HU",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 5,
+        "track_name": "Imola",
+        "track_slug": "imola",
+        "track_country": "Italy",
+        "track_country_code": "IT",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 6,
+        "track_name": "Indianapolis",
+        "track_slug": "indianapolis",
+        "track_country": "United States",
+        "track_country_code": "US",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 7,
+        "track_name": "Kyalami",
+        "track_slug": "kyalami",
+        "track_country": "South Africa",
+        "track_country_code": "ZA",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 8,
+        "track_name": "Laguna Seca",
+        "track_slug": "laguna_seca",
+        "track_country": "United States",
+        "track_country_code": "US",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 9,
+        "track_name": "Misano",
+        "track_slug": "misano",
+        "track_country": "Italy",
+        "track_country_code": "IT",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 10,
+        "track_name": "Monza",
+        "track_slug": "monza",
+        "track_country": "Italy",
+        "track_country_code": "IT",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 11,
+        "track_name": "Mount Panorama",
+        "track_slug": "mount_panorama",
+        "track_country": "Australia",
+        "track_country_code": "AU",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 12,
+        "track_name": "Nurburgring",
+        "track_slug": "nurburgring",
+        "track_country": "Germany",
+        "track_country_code": "DE",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 13,
+        "track_name": "Nordschleife",
+        "track_slug": "nurburgring_24",
+        "track_country": "Germany",
+        "track_country_code": "DE",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 14,
+        "track_name": "Oulton Park",
+        "track_slug": "outlon_park",
+        "track_country": "Great Britain",
+        "track_country_code": "GB",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 15,
+        "track_name": "Paul Ricard",
+        "track_slug": "paul_ricard",
+        "track_country": "France",
+        "track_country_code": "FR",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 16,
+        "track_name": "Red Bull Ring",
+        "track_slug": "red_bull_ring",
+        "track_country": "Austria",
+        "track_country_code": "AT",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 17,
+        "track_name": "Silverstone",
+        "track_slug": "silverstone",
+        "track_country": "Great Britain",
+        "track_country_code": "GB",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 18,
+        "track_name": "Snetterton",
+        "track_slug": "snetterton",
+        "track_country": "Great Britain",
+        "track_country_code": "GB",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 19,
+        "track_name": "Spa",
+        "track_slug": "spa",
+        "track_country": "Belgium",
+        "track_country_code": "BE",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 20,
+        "track_name": "Suzuka",
+        "track_slug": "suzuka",
+        "track_country": "Japan",
+        "track_country_code": "JP",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 21,
+        "track_name": "Valencia",
+        "track_slug": "valencia",
+        "track_country": "Spain",
+        "track_country_code": "ES",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 22,
+        "track_name": "Watkins Glen",
+        "track_slug": "watkins_glen",
+        "track_country": "United States",
+        "track_country_code": "US",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 23,
+        "track_name": "Zandvoort",
+        "track_slug": "zandvoort",
+        "track_country": "Netherlands",
+        "track_country_code": "NL",
+        "track_image": "",
+        "track_dlc": false
+    },
+    {
+        "id": 24,
+        "track_name": "Zolder",
+        "track_slug": "zolder",
+        "track_country": "Belgium",
+        "track_country_code": "BE",
+        "track_image": "",
+        "track_dlc": false
+    }
+]
