@@ -172,14 +172,14 @@
     "car_make": "ferrari",
     "car_model": "Ferrari 488 GT3 Evo 2020",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 25,
     "car_make": "mercedes",
     "car_model": "Mercedes-AMG GT3 2020",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 26,
@@ -193,56 +193,56 @@
     "car_make": "porsche",
     "car_model": "Porsche 911 GT3 Cup (Type 992)",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 28,
     "car_make": "bmw",
     "car_model": "BMW M2 CS Racing",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 29,
     "car_make": "lamborghini",
     "car_model": "Lamborghini Huracán Super Trofeo EVO2",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 30,
     "car_make": "ferrari",
     "car_model": "Ferrari 488 Challenge Evo",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 31,
     "car_make": "audi",
     "car_model": "Audi R8 LMS GT3 evo II",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 32,
     "car_make": "ferrari",
     "car_model": "Ferrari 296 GT3",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 33,
     "car_make": "lamborghini",
     "car_model": "Lamborghini Huracan Evo2",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 34,
     "car_make": "porsche",
     "car_model": "Porsche 992 GT3 R",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 35,
@@ -263,118 +263,118 @@
     "car_make": "alpine",
     "car_model": "Alpine A110 GT4",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 51,
     "car_make": "aston-martin",
     "car_model": "AMR V8 Vantage GT4",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 52,
     "car_make": "audi",
     "car_model": "Audi R8 LMS GT4",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 53,
     "car_make": "bmw",
     "car_model": "BMW M4 GT4",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 55,
     "car_make": "chevrolet",
     "car_model": "Chevrolet Camaro GT4",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 56,
     "car_make": "ginetta",
     "car_model": "Ginetta G55 GT4",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 57,
     "car_make": "ktm",
     "car_model": "KTM X-Bow GT4",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 58,
     "car_make": "maserati",
     "car_model": "Maserati MC GT4",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 59,
     "car_make": "mclaren",
     "car_model": "McLaren 570S GT4",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 60,
     "car_make": "mercedes",
     "car_model": "Mercedes-AMG GT4",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 61,
     "car_make": "porsche",
     "car_model": "Porsche 718 Cayman GT4",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 80,
     "car_make": "audi",
     "car_model": "Audi R8 LMS GT2",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 82,
     "car_make": "ktm",
     "car_model": "KTM XBOW GT2",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 83,
     "car_make": "maserati",
     "car_model": "Maserati MC20 GT2",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 84,
     "car_make": "mercedes",
     "car_model": "Mercedes AMG GT2",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 85,
     "car_make": "porsche",
     "car_model": "Porsche 911 GT2 RS CS Evo",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   },
   {
     "id": 86,
     "car_make": "porsche",
     "car_model": "Porsche 935",
     "image": null,
-    "car_dlc": false
+    "car_dlc": true
   }
 ]
