@@ -14,7 +14,7 @@ const sidebarNavItems: NavItem[] = [
     },
     {
         title: 'Manage Races',
-        href: '',
+        href: '/admin/races',
         icon: null
     }
 ];
