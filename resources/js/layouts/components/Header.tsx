@@ -22,7 +22,7 @@ export function Header() {
                 <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700,800,900" rel="stylesheet" />
             </Head>
 
-            <header className="container m-auto py-6 flex justify-between items-center">
+            <header className="hidden md:flex container m-auto py-6 justify-between items-center">
                 <nav className="nav--left flex items-center">
                     <div className="logo mr-12 ">
                         <h1 className='text-xl font-black tracking-tight'>

@@ -157,3 +157,36 @@
         @apply bg-background text-foreground;
     }
 }
+
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+h1 {
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.1em;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.1em;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.1em;
+}
+
+p {
+    /* font-size: 18px; */
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.1em;
+}

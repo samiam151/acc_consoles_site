@@ -26,6 +26,7 @@ import {
     eventRulesFields,
     settingsFields
 } from "./form-defaults/defaults";
+import { SessionBuilder } from './components/inputs/session-builder';
 
 export default function CreateRaceForm() {
 
@@ -48,11 +49,12 @@ export default function CreateRaceForm() {
             <AppLayout>
                 <AdminLayout>
                     <form className='space-y-6' onSubmit={submitRaceForm}>
-                        <Tabs defaultValue='configuration' className="w-full">
-                            <TabsList className='w-full'>
+                        <Tabs defaultValue='configuration' className="mb-0">
+                            <TabsList className='md:w-full'>
                                 <TabsTrigger value="configuration">Configuration</TabsTrigger>
                                 <TabsTrigger value="settings">Settings</TabsTrigger>
                                 <TabsTrigger value="event">Event</TabsTrigger>
+                                <TabsTrigger value="sessions">Sessions</TabsTrigger>
                                 <TabsTrigger value="eventRules">Event Rules</TabsTrigger>
                                 <TabsTrigger value="assistRules">Assist Rules</TabsTrigger>
                             </TabsList>
@@ -61,19 +63,26 @@ export default function CreateRaceForm() {
                                 <RaceConfigurationForm setData={setData} data={data} errors={errors} />
                             </TabsContent>
                             <TabsContent value="settings">
-                                <RaceSettingsForm data={data} errors={errors} />
+                                <RaceSettingsForm setData={setData} data={data} errors={errors} />
                             </TabsContent>
                             <TabsContent value="event">
-                                <RaceEventForm data={data} errors={errors} />
+                                <RaceEventForm setData={setData} data={data} errors={errors} />
+                            </TabsContent>
+                            <TabsContent value="sessions">
+                                <SessionBuilder setData={setData} data={data} errors={errors} />
                             </TabsContent>
                             <TabsContent value="eventRules">
-                                <RaceEventRulesForm data={data} errors={errors} />
+                                <RaceEventRulesForm setData={setData} data={data} errors={errors} />
                             </TabsContent>
                             <TabsContent value="assistRules">
-                                <RaceAssistRulesForm data={data} errors={errors} />
+                                <RaceAssistRulesForm setData={setData} data={data} errors={errors} />
                             </TabsContent>
                         </Tabs>
                         <Button type="submit" disabled={processing}>Submit</Button>
+
+                        <hr />
+
+                        <code>{ JSON.stringify(data, null, 6) }</code>
                     </form>
                 </AdminLayout>
             </AppLayout>

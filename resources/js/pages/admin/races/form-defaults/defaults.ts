@@ -10,7 +10,7 @@ export const configurationFields = {
 export const settingsFields = {
     serverName: "",
     adminPassword: "",
-    carGroup: "",
+    carGroup: "FreeForAll",
     trackMedalsRequirement: "",
     safetyRatingRequirement: "",
     racecraftRatingRequirement: -1,
@@ -24,7 +24,7 @@ export const settingsFields = {
     allowAutoDQ: 1,
     shortFormationLap: 0,
     dumpEntryList: 0,
-    formationLapType: 3
+    formationLapType: "3"
 }
 
 export const assistFields = {
@@ -36,7 +36,7 @@ export const assistFields = {
     disableAutoPitLimiter: 0,
     disableAutoGear: 0,
     disableAutoClutch: 0,
-    disableIdealLine: 0
+    disableIdealLine: 1
 }
 
 export const sessionFields = {
@@ -48,7 +48,7 @@ export const sessionFields = {
 }
 
 export const eventFields = {
-    track: null,
+    track: "spa",
     preRaceWaitingTimeSeconds: 60,
     sessionOverTimeSeconds: 120,
     ambientTemp: 26,
@@ -56,7 +56,29 @@ export const eventFields = {
     rain: 0,
     weatherRandomness: 0,
     configVersion: 1,
-    sessions: []
+    sessions: [
+        {
+            "hourOfDay": 10,
+            "dayOfWeekend": 1,
+            "timeMultiplier": 1,
+            "sessionType": "P",
+            "sessionDurationMinutes": 20
+          },
+          {
+            "hourOfDay": 17,
+            "dayOfWeekend": 2,
+            "timeMultiplier": 8,
+            "sessionType": "Q",
+            "sessionDurationMinutes": 10
+          },
+          {
+            "hourOfDay": 16,
+            "dayOfWeekend": 3,
+            "timeMultiplier": 3,
+            "sessionType": "Q",
+            "sessionDurationMinutes": 20
+          }
+    ]
 }
 
 export const eventRulesFields = {
