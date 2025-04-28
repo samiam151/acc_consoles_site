@@ -15,7 +15,7 @@ class AdminController extends Controller
     public function users(): Response {
         $users = User::with('role')->get();
         return Inertia::render('admin/users', [
-            'users' => $users
+            'users' => User::all()
         ]);
     }
 

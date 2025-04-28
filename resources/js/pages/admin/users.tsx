@@ -100,7 +100,6 @@ const columns = [
 ]
 
 export default function Dashboard({ users }) {
-    console.log(columns, users)
 
     const table = useReactTable({
         users,
