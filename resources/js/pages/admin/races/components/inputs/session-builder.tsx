@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
+import { Session } from "@/types/index";
 
 import { Button } from "@/components/ui/button"
 import {
@@ -16,15 +17,12 @@ import {
     SelectContent,
     SelectGroup,
     SelectItem,
-    SelectLabel,
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
 
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-
 export function SessionBuilder({ data, setData, errors }) {
+    const [isEditingSession, setIsEditingSession] = useState(false);
     const [tempSession, updateTempSession] = useState<Session>({
         hourOfDay: 0,
         dayOfWeekend: 3,
@@ -33,14 +31,6 @@ export function SessionBuilder({ data, setData, errors }) {
         sessionDurationMinutes: 60
     });
 
-    type Session = {
-        hourOfDay: number,
-        dayOfWeekend: number,
-        timeMultiplier: number,
-        sessionType: string,
-        sessionDurationMinutes: number
-    }
-
     const getSessionType = (initial: string) => {
         if (initial === "P") return "Practice";
         if (initial === "Q") return "Qualifying";
@@ -48,6 +38,7 @@ export function SessionBuilder({ data, setData, errors }) {
     }
 
     const resetTempSession = () => {
+        setIsEditingSession(false);
         updateTempSession({
             hourOfDay: 0,
             dayOfWeekend: 3,
@@ -55,6 +46,11 @@ export function SessionBuilder({ data, setData, errors }) {
             sessionType: "P",
             sessionDurationMinutes: 60
         })
+    }
+
+    const editTempSession = (index) => {
+        updateTempSession({ ...data.sessions[index] })
+        setIsEditingSession(true);
     }
 
     const addSessions = (e: Event) => {
@@ -73,7 +69,12 @@ export function SessionBuilder({ data, setData, errors }) {
         })
     }
 
-    const removeSession = () => {
+    const removeSession = (index: number) => {
+        data.sessions.splice(index, 1);
+        setData("sessions", data.sessions);
+    }
+
+    const saveEditedSession = () => {
 
     }
 
@@ -92,8 +93,8 @@ export function SessionBuilder({ data, setData, errors }) {
                                 <p className="mb-2 text-sm">Day of the Week: { session.dayOfWeekend }</p>
                             </CardContent>
                             <CardFooter className="grid md:grid-cols-2 gap-2">
-                                <Button className="w-full">Edit</Button>
-                                <Button onClick={removeSession} className="w-full">Delete</Button>
+                                <Button onClick={() => editTempSession(index)} className="w-full">Edit</Button>
+                                <Button onClick={() => removeSession(index)} variant="destructive" className="w-full">Delete</Button>
                             </CardFooter>
                         </Card>
                     ))
@@ -145,13 +146,17 @@ export function SessionBuilder({ data, setData, errors }) {
                     </div>
                 </div>
 
-                <div className="flex">
-                    <Button className="mr-4" onClick={addSessions}>Add Session</Button>
-                    <Button className="mr-4" variant="destructive" onClick={resetTempSession}>Reset Session</Button>
+                <div className="flex justify-center sm:justify-end">
+                    {
+                        isEditingSession
+                        ? <Button className="mx-2" onClick={saveEditedSession}>Save Current Session</Button>
+                        : <Button className="mx-2" onClick={addSessions}>Add Current Session</Button>
+                    }
+                    <Button className="mx-2" variant="destructive" onClick={resetTempSession}>Reset Session</Button>
                 </div>
             </div>
 
-            <div className="my-6">{ JSON.stringify(tempSession, null, 6) }</div>
+            <hr className="my-10" />
 
         </>
 

@@ -190,3 +190,9 @@ p {
     letter-spacing: -0.04em;
     line-height: 1.1em;
 }
+
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}

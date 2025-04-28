@@ -46,3 +46,11 @@ export interface User {
     role: Array;
     [key: string]: unknown; // This allows for additional properties...
 }
+
+export type Session = {
+    hourOfDay: number,
+    dayOfWeekend: number,
+    timeMultiplier: number,
+    sessionType: string,
+    sessionDurationMinutes: number
+}

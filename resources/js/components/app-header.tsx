@@ -56,7 +56,8 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
     const { auth } = page.props;
     const getInitials = useInitials();
 
-    const isAdmin = auth.user.role.role_id == Roles.ADMIN;
+    const isLoggedIn = auth.user || false;
+    const isAdmin = isLoggedIn && auth.user.role.role_id == Roles.ADMIN;
 
     return (
         <>
@@ -102,7 +103,7 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                                                 ))
                                             }
                                             {
-                                                isAdmin &&
+                                                (isLoggedIn && isAdmin) &&
                                                 <a
                                                     key="Admin Portal"
                                                     href="/admin/users"
@@ -194,14 +195,17 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                         </div>
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                                <Button variant="ghost" className="size-10 rounded-full p-1">
-                                    <Avatar className="size-8 overflow-hidden rounded-full">
-                                        <AvatarImage src={auth.user.avatar} alt={auth.user.name} />
-                                        <AvatarFallback className="rounded-lg bg-neutral-200 text-black dark:bg-neutral-700 dark:text-white">
-                                            {getInitials(auth.user.name)}
-                                        </AvatarFallback>
-                                    </Avatar>
-                                </Button>
+                                {
+                                    isLoggedIn &&
+                                    <Button variant="ghost" className="size-10 rounded-full p-1">
+                                        <Avatar className="size-8 overflow-hidden rounded-full">
+                                            <AvatarImage src={auth.user.avatar} alt={auth.user.name} />
+                                            <AvatarFallback className="rounded-lg bg-neutral-200 text-black dark:bg-neutral-700 dark:text-white">
+                                                {getInitials(auth.user.name)}
+                                            </AvatarFallback>
+                                        </Avatar>
+                                    </Button>
+                                }
                             </DropdownMenuTrigger>
                             <DropdownMenuContent className="w-56" align="end">
                                 <UserMenuContent user={auth.user} />

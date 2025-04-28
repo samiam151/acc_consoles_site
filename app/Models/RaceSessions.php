@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class RaceSessions extends Model
@@ -15,10 +16,10 @@ class RaceSessions extends Model
         'timeMultiplier',
         'sessionType',
         'sessionDurationMinutes',
-        'race_event_id'
+        'race_id'
     ];
 
-    public function race_event(): HasOne {
-        return $this->hasOne(RaceEvents::class, 'race_event_id',);
+    public function races(): BelongsTo {
+        return $this->belongsTo(Race::class);
     }
 }

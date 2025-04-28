@@ -14,7 +14,7 @@ export default ({ children, ...props }: AppLayoutProps) => {
             <Header />
             <AppHeader />
 
-            <div className="container m-auto min-h-80vh">
+            <div className="container m-auto p-6 sm:p-0">
                 { children }
             </div>
 

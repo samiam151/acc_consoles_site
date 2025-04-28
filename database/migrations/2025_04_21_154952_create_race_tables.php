@@ -11,9 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('race_settings', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('races', function (Blueprint $table) {
             $table->string('serverName');
             $table->string('adminPassword');
             $table->string('carGroup');
@@ -31,16 +29,8 @@ return new class extends Migration
             $table->integer("shortFormationLap");
             $table->integer("dumpEntryList");
             $table->integer("formationLapType");
-
-            $table->unsignedBigInteger('race_id')->unsigned()->index();
-            $table->foreign("race_id")->references("id")->on("races")->onDelete("cascade");
-        });
-
-        Schema::create('race_event_rules', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
             $table->integer("qualifyStandingType");
-            $table->integer("pitWidowLengthSec");
+            $table->integer("pitWindowLengthSec");
             $table->integer("driverStintTimeSec");
             $table->integer("mandatoryPitstopCount");
             $table->integer("maxTotalDrivingTime");
@@ -51,28 +41,12 @@ return new class extends Migration
             $table->boolean("isMandatoryPitstopTyreChangeRequired");
             $table->boolean("isMandatoryPitstopSwapDriverRequired");
             $table->integer("tyreSetCount");
-
-            $table->unsignedBigInteger('race_id')->unsigned()->index();
-            $table->foreign("race_id")->references("id")->on("races")->onDelete("cascade");
-        });
-
-        Schema::create('race_configurations', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
             $table->integer("udpPort");
             $table->integer("tcpPort");
             $table->integer("maxConnections");
             $table->integer("lanDiscovery");
-            $table->integer("registerLobby");
+            $table->integer("registerToLobby");
             $table->integer("configVersion");
-
-            $table->unsignedBigInteger('race_id')->unsigned()->index();
-            $table->foreign("race_id")->references("id")->on("races")->onDelete("cascade");
-        });
-
-        Schema::create('race_assist_rules', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
             $table->integer("stabilityControlLevelMax");
             $table->integer("disableAutosteer");
             $table->integer("disableAutoLights");
@@ -82,26 +56,15 @@ return new class extends Migration
             $table->integer("disableAutoGear");
             $table->integer("disableAutoClutch");
             $table->integer("disableIdealLine");
-
-            $table->unsignedBigInteger('race_id')->unsigned()->index();
-            $table->foreign("race_id")->references("id")->on("races")->onDelete("cascade");
-        });
-
-        Schema::create('race_events', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->unsignedBigInteger('track_id')->unsigned()->index();
-            $table->foreign("track_id")->references("id")->on("tracks")->onDelete("cascade");
             $table->integer("preRaceWaitingTimeSeconds");
             $table->integer("sessionOverTimeSeconds");
             $table->integer("ambientTemp");
             $table->integer("cloudLevel");
             $table->integer("rain");
             $table->integer("weatherRandomness");
-            $table->integer("configVersion");
 
-            $table->unsignedBigInteger('race_id')->unsigned()->index();
-            $table->foreign("race_id")->references("id")->on("races")->onDelete("cascade");
+            $table->unsignedBigInteger('track_id')->unsigned()->index();
+            $table->foreign("track_id")->references("id")->on("tracks")->onDelete("cascade");
         });
 
         Schema::create('race_sessions', function (Blueprint $table) {
@@ -113,8 +76,8 @@ return new class extends Migration
             $table->string("sessionType");
             $table->integer("sessionDurationMinutes");
 
-            $table->unsignedBigInteger('race_event_id')->unsigned()->index();
-            $table->foreign("race_event_id")->references("id")->on("race_events")->onDelete("cascade");
+            $table->unsignedBigInteger('race_id')->unsigned()->index();
+            $table->foreign("race_id")->references("id")->on("races")->onDelete("cascade");
         });
     }
 
@@ -123,11 +86,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('race_settings');
-        Schema::dropIfExists('race_event_rules');
-        Schema::dropIfExists('race_configurations');
-        Schema::dropIfExists('race_assist_rules');
         Schema::dropIfExists('race_sessions');
-        Schema::dropIfExists('race_events');
     }
 };

@@ -6,7 +6,10 @@ import {
     TabsList,
     TabsTrigger,
 } from "@/components/ui/tabs"
-import { useForm } from '@inertiajs/react'
+import { useForm, usePage, Link } from '@inertiajs/react'
+import { type SharedData } from '@/types';
+import { Badge } from "@/components/ui/badge"
+
 
 import AppLayout from "@/layouts/app-layout";
 import AdminLayout from "@/layouts/admin/layout";
@@ -25,38 +28,57 @@ import {
     eventFields,
     eventRulesFields,
     settingsFields
-} from "./form-defaults/defaults";
+} from "./form-defaults/filled-defaults";
 import { SessionBuilder } from './components/inputs/session-builder';
 
 export default function CreateRaceForm() {
+    const page = usePage<SharedData>();
 
-    const { data, setData, post, processing, errors } = useForm({
+    const race = page.props.race;
+    const raceIsNew = race == undefined;
+
+    const defaultData = race ?? {
         ...configurationFields,
         ...assistFields,
         ...eventFields,
         ...eventRulesFields,
-        ...settingsFields
-    });
+        ...settingsFields,
+    }
 
+    const { data, setData, post, processing, errors, isDirty, transform } = useForm(defaultData);
+
+    console.log(data)
 
     const submitRaceForm = (e: Event) => {
+        console.log("submitting...")
         e.preventDefault();
-        console.log(data);
+
+        transform(data => ({
+            ...data,
+            registerToLobby: Number(data.registerToLobby),
+        }))
+        console.log(data)
+
+        // const postRoute = raceIsNew ? "store.races" : "edit.races";
+        post(route("store.races"), {
+            preserveScroll: true,
+        })
     }
 
     return (
         <>
             <AppLayout>
                 <AdminLayout>
-                    <form className='space-y-6' onSubmit={submitRaceForm}>
-                        <Tabs defaultValue='configuration' className="mb-0">
-                            <TabsList className='md:w-full'>
-                                <TabsTrigger value="configuration">Configuration</TabsTrigger>
+                    <form className='space-y-6' onSubmit={(e: Event) => e.preventDefault()}>
+                        {isDirty && <Badge variant="destructive" className='w-full py-2'>There are unsaved form changes.</Badge>}
+                        <Tabs defaultValue='settings' className="mb-0">
+                            <TabsList className='flex-wrap sm:w-full'>
                                 <TabsTrigger value="settings">Settings</TabsTrigger>
                                 <TabsTrigger value="event">Event</TabsTrigger>
                                 <TabsTrigger value="sessions">Sessions</TabsTrigger>
                                 <TabsTrigger value="eventRules">Event Rules</TabsTrigger>
                                 <TabsTrigger value="assistRules">Assist Rules</TabsTrigger>
+                                <TabsTrigger value="configuration">Configuration</TabsTrigger>
                             </TabsList>
 
                             <TabsContent value="configuration">
@@ -78,11 +100,17 @@ export default function CreateRaceForm() {
                                 <RaceAssistRulesForm setData={setData} data={data} errors={errors} />
                             </TabsContent>
                         </Tabs>
-                        <Button type="submit" disabled={processing}>Submit</Button>
+
+                        <Button disabled={processing} onClick={(e: Event) => submitRaceForm(e)}>{ raceIsNew ? "Create" : "Update" }</Button>
+                        <Button variant="destructive" disabled={processing} className='mx-4'>
+                            <Link href={route("show.races")}>Cancel</Link>
+                        </Button>
 
                         <hr />
 
                         <code>{ JSON.stringify(data, null, 6) }</code>
+                        <hr />
+                        <code>{ JSON.stringify(data.track, null, 6) }</code>
                     </form>
                 </AdminLayout>
             </AppLayout>

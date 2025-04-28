@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Track extends Model
 {
@@ -19,4 +20,8 @@ class Track extends Model
         'track_image',
         'track_dlc',
     ];
+
+    public function races(): HasMany {
+        return $this->hasMany(Race::class);
+    }
 }

@@ -53,7 +53,7 @@ export default function RaceEventRulesForm({ setData, data, errors }) {
             <div className="grid md:grid-cols-3 gap-4 mb-6">
                 <div className="grid gap-4">
                     <label htmlFor="pitWindowLengthSec">Pit Window Length (in seconds)</label>
-                    <input onChange={(e) => setData("pitWindowLengthSec", e.target.value)} value={data.pitWindowLengthSec} className="border p-2 rounded-sm" type="text" name="pitWindowLengthSec" placeholder="" />
+                    <input onChange={(e) => setData("pitWindowLengthSec", Number(e.target.value))} value={data.pitWindowLengthSec} className="border p-2 rounded-sm" type="text" name="pitWindowLengthSec" placeholder="" />
                 </div>
                 <div className="grid gap-4">
                     <label htmlFor="maxDriversCount">Maximum Drviers Count</label>

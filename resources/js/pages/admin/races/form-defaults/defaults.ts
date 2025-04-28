@@ -75,7 +75,7 @@ export const eventFields = {
             "hourOfDay": 16,
             "dayOfWeekend": 3,
             "timeMultiplier": 3,
-            "sessionType": "Q",
+            "sessionType": "R",
             "sessionDurationMinutes": 20
           }
     ]

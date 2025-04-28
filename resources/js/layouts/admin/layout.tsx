@@ -54,7 +54,7 @@ export default function AdminLayout({ children }: PropsWithChildren) {
 
                 <Separator className="my-6 md:hidden" />
 
-                <div className="flex-1 mr-10">
+                <div className="flex-1 md:mr-10">
                     <section className="space-y-12">{children}</section>
                 </div>
             </div>

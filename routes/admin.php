@@ -13,6 +13,9 @@ Route::middleware(['auth', 'verified', 'admin'])->group(function () {
 
         Route::get("/races", [RaceController::class, "show"])->name('show.races');
         Route::get("/races/create", [RaceController::class, "create"])->name('create.races');
+        Route::get("/races/{race}", [RaceController::class, "edit"])->name('edit.races');
+
+        Route::post("/races/destroy/{race}", [RaceController::class, "destroy"])->name('destroy.races');
         Route::post('/races', [RaceController::class, "store"])->name('store.races');
     });
 });

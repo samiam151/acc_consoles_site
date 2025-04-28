@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { usePage } from "@inertiajs/react";
 import { type SharedData } from '@/types';
 
@@ -16,15 +17,24 @@ export default function RaceEventForm({ setData, data, errors }) {
     const page = usePage<SharedData>();
     const tracks = page.props.tracks;
 
+    const updateTrack = (value) => {
+        if (value) {
+            const selectedTrack = tracks.find(t => t.id == value)
+            console.log("selected track", selectedTrack)
+            setData("track", selectedTrack);
+            setData("track_id", selectedTrack.id);
+        }
+    }
+
     return (
         <div className="my-10">
             <div className="grid md:grid-cols-2 gap-4 mb-6">
                 <div className="grid gap-4">
-                    <label htmlFor="track">Track</label>
+                    <label htmlFor="track_id">Track</label>
                     <Select
-                        name="track"
-                        value={data.track}
-                        onValueChange={(value) => setData("track", value)}
+                        name="track_id"
+                        value={data.track.id}
+                        onValueChange={updateTrack}
                     >
                         <SelectTrigger className="w-full">
                             <SelectValue placeholder="Select a Track" />
@@ -32,12 +42,11 @@ export default function RaceEventForm({ setData, data, errors }) {
                         <SelectContent>
                             <SelectGroup>
                                 {
-                                    tracks.map(track => (
+                                    tracks.map((track, i) => (
                                         <SelectItem
-                                            key={track.id}
-                                            value={ track.track_slug }
-                                            >{ track.track_name }
-                                        </SelectItem>
+                                            key={i}
+                                            value={ track.id }
+                                        >{ track.track_name }</SelectItem>
                                     ))
                                 }
                             </SelectGroup>
