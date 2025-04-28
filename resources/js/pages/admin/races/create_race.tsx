@@ -47,10 +47,7 @@ export default function CreateRaceForm() {
 
     const { data, setData, post, processing, errors, isDirty, transform } = useForm(defaultData);
 
-    console.log(data)
-
     const submitRaceForm = (e: Event) => {
-        console.log("submitting...")
         e.preventDefault();
 
         transform(data => ({
@@ -59,7 +56,6 @@ export default function CreateRaceForm() {
         }))
         console.log(data)
 
-        // const postRoute = raceIsNew ? "store.races" : "edit.races";
         post(route("store.races"), {
             preserveScroll: true,
         })

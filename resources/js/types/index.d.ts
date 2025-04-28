@@ -48,6 +48,7 @@ export interface User {
 }
 
 export type Session = {
+    id?: number
     hourOfDay: number,
     dayOfWeekend: number,
     timeMultiplier: number,

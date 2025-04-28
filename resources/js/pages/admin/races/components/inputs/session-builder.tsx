@@ -22,14 +22,16 @@ import {
 } from "@/components/ui/select"
 
 export function SessionBuilder({ data, setData, errors }) {
-    const [isEditingSession, setIsEditingSession] = useState(false);
-    const [tempSession, updateTempSession] = useState<Session>({
+    const defaultTempSession = {
         hourOfDay: 0,
         dayOfWeekend: 3,
         timeMultiplier: 3,
         sessionType: "P",
         sessionDurationMinutes: 60
-    });
+    }
+
+    const [sessionBeingEdited, setSessionBeingEdited] = useState(null);
+    const [tempSession, updateTempSession] = useState<Session>(defaultTempSession);
 
     const getSessionType = (initial: string) => {
         if (initial === "P") return "Practice";
@@ -38,7 +40,7 @@ export function SessionBuilder({ data, setData, errors }) {
     }
 
     const resetTempSession = () => {
-        setIsEditingSession(false);
+        setSessionBeingEdited(null);
         updateTempSession({
             hourOfDay: 0,
             dayOfWeekend: 3,
@@ -48,9 +50,9 @@ export function SessionBuilder({ data, setData, errors }) {
         })
     }
 
-    const editTempSession = (index) => {
+    const editTempSession = (index: number) => {
         updateTempSession({ ...data.sessions[index] })
-        setIsEditingSession(true);
+        setSessionBeingEdited(data.sessions[index]);
     }
 
     const addSessions = (e: Event) => {
@@ -75,7 +77,13 @@ export function SessionBuilder({ data, setData, errors }) {
     }
 
     const saveEditedSession = () => {
-
+        const newSessions = data.sessions.map((s: Session) => {
+            if (s.id === tempSession.id) return tempSession;
+            return s;
+        })
+        setData("sessions", newSessions)
+        setSessionBeingEdited(null);
+        updateTempSession(defaultTempSession);
     }
 
     return (
@@ -83,7 +91,7 @@ export function SessionBuilder({ data, setData, errors }) {
             <div className="grid md:grid-cols-4 gap-4 my-15">
                 {
                     data.sessions.map((session: Session, index: number) => (
-                        <Card className="" key={index}>
+                        <Card className={(sessionBeingEdited && sessionBeingEdited.id === session.id) ? "outline-2" : ""} key={index}>
                             <CardHeader>
                                 <CardTitle>{ getSessionType(session.sessionType) }</CardTitle>
                             </CardHeader>
@@ -100,6 +108,7 @@ export function SessionBuilder({ data, setData, errors }) {
                     ))
                 }
             </div>
+            <h2 className="my-12">{sessionBeingEdited ? "Edit Selected" : "Create New"} Session</h2>
 
             <div>
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
@@ -148,11 +157,13 @@ export function SessionBuilder({ data, setData, errors }) {
 
                 <div className="flex justify-center sm:justify-end">
                     {
-                        isEditingSession
-                        ? <Button className="mx-2" onClick={saveEditedSession}>Save Current Session</Button>
+                        sessionBeingEdited
+                        ? <Button className="mx-2" onClick={saveEditedSession}>Update Current Session</Button>
                         : <Button className="mx-2" onClick={addSessions}>Add Current Session</Button>
                     }
-                    <Button className="mx-2" variant="destructive" onClick={resetTempSession}>Reset Session</Button>
+                    <Button className="mx-2" variant="destructive" onClick={resetTempSession}>{
+                        sessionBeingEdited ? "Cancel" : "Reset"
+                    }</Button>
                 </div>
             </div>
 

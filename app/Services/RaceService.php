@@ -27,9 +27,12 @@ class RaceService {
             $all
         );
 
+        $race->sessions()->delete();
         foreach ($all['sessions'] as $session) {
-            $saved_session = new RaceSessions($session);
-            $race->sessions()->save($saved_session);
+            RaceSessions::updateOrCreate(
+                ['id' => $session['id']],
+                $session
+            );
         }
     }
 
