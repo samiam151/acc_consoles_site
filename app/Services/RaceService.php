@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 
 class RaceService {
 
-    public function create_race(Request $request) {
+    public function create_race(Request $request): void
+    {
         $all = $request->all();
         $race = new Race($all);
         $race->save();
@@ -19,7 +20,8 @@ class RaceService {
         }
     }
 
-    public function update_race(Request $request) {
+    public function update_race(Request $request): void
+    {
         $all = $request->all();
         $race = Race::find($request->input("id"));
         $race->updateOrCreate(

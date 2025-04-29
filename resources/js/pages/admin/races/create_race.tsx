@@ -102,11 +102,6 @@ export default function CreateRaceForm() {
                             <Link href={route("show.races")}>Cancel</Link>
                         </Button>
 
-                        <hr />
-
-                        <code>{ JSON.stringify(data, null, 6) }</code>
-                        <hr />
-                        <code>{ JSON.stringify(data.track, null, 6) }</code>
                     </form>
                 </AdminLayout>
             </AppLayout>

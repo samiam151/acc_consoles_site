@@ -32,6 +32,7 @@ export function SessionBuilder({ data, setData, errors }) {
 
     const [sessionBeingEdited, setSessionBeingEdited] = useState(null);
     const [tempSession, updateTempSession] = useState<Session>(defaultTempSession);
+    const [editingIndex, setEditingIndex] = useState<number>(NaN);
 
     const getSessionType = (initial: string) => {
         if (initial === "P") return "Practice";
@@ -41,16 +42,11 @@ export function SessionBuilder({ data, setData, errors }) {
 
     const resetTempSession = () => {
         setSessionBeingEdited(null);
-        updateTempSession({
-            hourOfDay: 0,
-            dayOfWeekend: 3,
-            timeMultiplier: 3,
-            sessionType: "P",
-            sessionDurationMinutes: 60
-        })
+        updateTempSession(defaultTempSession)
     }
 
     const editTempSession = (index: number) => {
+        setEditingIndex(index);
         updateTempSession({ ...data.sessions[index] })
         setSessionBeingEdited(data.sessions[index]);
     }
@@ -77,13 +73,14 @@ export function SessionBuilder({ data, setData, errors }) {
     }
 
     const saveEditedSession = () => {
-        const newSessions = data.sessions.map((s: Session) => {
-            if (s.id === tempSession.id) return tempSession;
+        const newSessions = data.sessions.map((s: Session, i: number) => {
+            if (editingIndex === i) return tempSession;
             return s;
         })
         setData("sessions", newSessions)
         setSessionBeingEdited(null);
         updateTempSession(defaultTempSession);
+        setEditingIndex(NaN)
     }
 
     return (
@@ -91,7 +88,7 @@ export function SessionBuilder({ data, setData, errors }) {
             <div className="grid md:grid-cols-4 gap-4 my-15">
                 {
                     data.sessions.map((session: Session, index: number) => (
-                        <Card className={(sessionBeingEdited && sessionBeingEdited.id === session.id) ? "outline-2" : ""} key={index}>
+                        <Card className={(editingIndex === index) ? "outline-2" : ""} key={index}>
                             <CardHeader>
                                 <CardTitle>{ getSessionType(session.sessionType) }</CardTitle>
                             </CardHeader>
